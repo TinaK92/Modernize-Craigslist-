@@ -88,7 +88,7 @@ footer {
 
 #center {
   width: 50%;
-  border: 1px, #464646;
+  border: 1px solid #464646;
   border-radius: 10px;
 }
 
@@ -115,6 +115,69 @@ ul.clfooter > li {
   padding-right: 5px;
 }
 
-#logo {
-  color: #800080;
+
+h4.ban::before {
+  content: "☮️ "; /* Peace symbol emoji */
+  display: inline-block;
+  margin-right: 8px; /* Adds space between the emoji and the text */
+  color: purple; /* Matches the color of the Craigslist logo */
+}
+
+/* Set the border on each TD to be a solid 1px with color #333 */
+.cal td {
+  border: 1px solid #333;
+}
+
+/* Collapse the borders around each date into a single calendar */
+.cal {
+  border-collapse: collapse;
+}
+
+/* Change all the colors of the text of the links to green and make them bold */
+.cal a {
+  color: palevioletred;
+  font-weight: bold;
+}
+
+/* Center-align the content of all the TDs in the calendar */
+.cal td {
+  text-align: center;
+  vertical-align: middle; /* Ensures that the content is vertically centered */
+}
+
+/* Change the color of the text of the days in the calendar that are not links to a half-transparent black */
+.cal td:not(:has(a)) {
+  color: rgba(0, 0, 0, 0.5); /* Half-transparent black */
+  cursor: not-allowed; /* Indicate that these days are not clickable */
+}
+
+/* Highlight the day indicated as "today" */
+.cal .today {
+  background-color: darkviolet;
+  color: white;
+}
+
+/* Change the background color to lavender when hovering over a table data cell */
+.cal td:hover {
+  background-color: lavender;
+}
+
+/* Style input fields when they are focused */
+input:focus {
+  border: 2px solid #800080; /* Craigslist purple */
+  background-color: #f0f0f0; /* Light gray background */
+  outline: none; /* Remove the default outline */
+}
+
+
+/* Style the first list item in each unordered list */
+ul li:first-child {
+  font-weight: bold; /* Make the first item bold */
+  color: #800080; /* Craigslist purple */
+}
+
+
+/* Style every even table row in the calendar for a striped effect */
+.cal tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray background for even rows */
 }
